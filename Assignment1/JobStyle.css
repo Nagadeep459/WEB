@@ -1,0 +1,49 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #2a9d8f;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+/* Letter Styling */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px gray;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.date {
+    text-align: right;
+    font-weight: bold;
+}
+
+mark {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.signature {
+    font-family: "Brush Script MT", cursive;
+    font-size: 20px;
+}

@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../web-d projects"
+		},
+		{
+			"path": "../Class Assignments/s4/UID/Assignments"
+		},
+		{
+			"path": "../ClassAssignments/s4/UID/Assignments/Ass_2_3"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Assignments"
+	}
+}

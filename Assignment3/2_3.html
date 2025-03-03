@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout with Sidebar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto 1fr auto;
+            width: 70%;
+            height: 60vh;
+            border: 2px solid black;
+        }
+        .box {
+            background-color: pink;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border: 2px solid black;
+        }
+        .header, .footer {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box header">Header</div>
+        <div class="box sidebar">Asidebar1</div>
+        <div class="box main">Main content</div>
+        <div class="box footer">Footer</div>
+    </div>
+
+</body>
+</html>

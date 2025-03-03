@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Image Grid</title>
+<style>
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #ffffff; /* Sky blue background */
+        max-width: 800px;
+        gap: 10px;
+    }
+
+    .image-box {
+        border: 2px solid #000;
+        background-color: #4682B4; /* Steel blue box color */
+        text-align: center;
+        padding: 10px;
+        flex: 1;
+    }
+
+    .image-box img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+        .image-container {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h2 style="text-align: center;">Responsive Image Grid</h2>
+<div class="image-container">
+    <div class="image-box">
+        <img src="./1.png" alt="Image 1" width="400",height="400">
+    </div>
+    <div class="image-box">
+        <img src="./2.png" alt="Image 2" width="300",height="400" >
+    </div>
+    <div class="image-box">
+        <img src="./3.png" alt="Image 3" width="400",height="400" >
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto;
+            width: 70%;
+            border-left: 2px solid black;
+        }
+        .box {
+            background-color: pink;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border: 2px solid black;
+        }
+        .header {
+            grid-column: span 3;
+        }
+        .landing {
+            grid-column: span 3;
+            padding: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box header">Header</div>
+        <div class="box landing">Landing Page</div>
+        <div class="box">About us</div>
+        <div class="box">Vision</div>
+        <div class="box">Contact us</div>
+    </div>
+
+</body>
+</html>

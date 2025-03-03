@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Aside Sections</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto 1fr;
+            width: 80%;
+            height: 50vh;
+            border: 2px solid black;
+        }
+        .box {
+            background-color: #ADFF2F;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .header {
+            grid-column: span 2;
+        }
+        .main-content {
+            grid-row: span 2;
+        }
+        .aside1 {
+            grid-row: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box header">Header</div>
+        <div class="box main-content">Left Main Content</div>
+        <div class="box aside2">Aside2</div>
+        <div class="box aside1">Aside1</div>
+    </div>
+
+</body>
+</html>

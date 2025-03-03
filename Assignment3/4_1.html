@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Images</title>
+</head>
+
+<body>
+
+<h2>Responsive Images Example</h2>
+
+<picture>
+    
+    <source srcset="./images/sport_1.png" width=""media="(min-width: 1500px)">
+   
+    <source srcset="./images/random2.png" media="(min-width: 600px)">
+    
+    <img src="./images/random.png" alt="Responsive Example" style="max-width: 100%;">
+</picture>
+
+<p>This image changes based on the browser width: 600px and 1500px.</p>
+
+</body>
+</html>

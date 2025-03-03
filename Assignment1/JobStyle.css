@@ -1,12 +1,6 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
 
-/* Header Styling */
+
+
 header {
     background-color: #2a9d8f;
     color: white;
@@ -23,7 +17,7 @@ header p {
     margin: 5px 0;
 }
 
-/* Letter Styling */
+
 .container {
     background: white;
     padding: 20px;

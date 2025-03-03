@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Table</title>
+</head>
+
+<body>
+
+<h2>Responsive Table Example</h2>
+
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th style="padding: 8px;">First Name</th>
+            <th style="padding: 8px;">Last Name</th>
+            <th style="padding: 8px;">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 8px;">Naga</td>
+            <td style="padding: 8px;">Deep</td>
+            <td style="padding: 8px;">18</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px;">Rohan</td>
+            <td style="padding: 8px;">Chitta</td>
+            <td style="padding: 8px;">18</td>
+        </tr>
+    </tbody>
+</table>
+
+<style>
+    @media (min-width: 1500px) {
+        table th:nth-child(1), table td:nth-child(1) { width: 30%; }
+        table th:nth-child(2), table td:nth-child(2) { width: 40%; }
+        table th:nth-child(3), table td:nth-child(3) { width: 30%; }
+    }
+
+    @media (max-width: 600px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #000;
+        }
+        tr {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+</body>
+</html>

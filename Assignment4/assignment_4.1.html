@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Media Queries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        @media (min-width: 1200px) {
+            h1 { font-size: 32px; }
+            p { font-size: 18px; }
+        }
+
+        @media (min-width: 600px) and (max-width: 1200px) {
+            h1 { font-size: 24px; }
+            p { font-size: 16px; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 20px; }
+            p { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Heading</h1>
+    <p>This text changes size based on screen width.</p>
+</body>
+</html>

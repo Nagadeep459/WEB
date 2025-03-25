@@ -1,16 +1,19 @@
-    body {
-    font-family: Arial, sans-serif;
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #e8f0ff);
     color: #333;
 }
 
+/* Header Styling */
 header {
-    background: #333;
+    background: #222;
     color: white;
     text-align: center;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -20,33 +23,80 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
+nav ul li a:hover {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+/* Section Styling */
 section {
     padding: 40px;
     text-align: center;
 }
 
+/* Project Styling */
 .project {
     background: white;
     padding: 20px;
     margin: 10px auto;
     width: 80%;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ff6b6b;
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* Contact Links */
+#contact a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#contact a:hover {
+    color: #d62b2b;
+    text-decoration: underline;
+}
+
+/* Footer Styling */
 footer {
-    background: #333;
+    background: #222;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 20px;
+    font-size: 14px;
 }

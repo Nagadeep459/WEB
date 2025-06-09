@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Solutions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .problem {
+            margin: 30px 0;
+            padding: 25px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            background: #fafafa;
+            transition: all 0.3s ease;
+        }
+        
+        .problem:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .problem h2 {
+            color: #4a5568;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        input, select {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            margin: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-container {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .form-group {
+            margin: 10px 0;
+        }
+        
+        .form-group label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .form-group input {
+            width: 200px;
+        }
+        
+        .result {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            min-height: 50px;
+        }
+        
+        .error {
+            background: #ffeaa7;
+            border: 1px solid #fdcb6e;
+            color: #d63031;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .menu-item {
+            background: #74b9ff;
+            color: white;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item[data-menu="true"] {
+            background: #00b894;
+        }
+        
+        .game-container {
+            text-align: center;
+            background: #f1f3f4;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+        
+        .selection-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        #selectedButtons {
+            margin: 15px 0;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .toggle-btn {
+            padding: 8px 16px;
+            background: #95a5a6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .input-group {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Programming Solutions</h1>
+        
+        <!-- Problem 3: Factorial Calculator -->
+        <div class="problem">
+            <h2>Problem 3: Factorial Calculator</h2>
+            <p><strong>Requirement:</strong> Use prompt to enter number, pass to function, use console.log and Alert to display output</p>
+            <button onclick="calculateFactorial()">Calculate Factorial</button>
+            <div id="factorialResult" class="result"></div>
+        </div>
+        
+        <!-- Problem 4: Temperature Categorizer -->
+        <div class="problem">
+            <h2>Problem 4: Temperature Categorizer</h2>
+            <p><strong>Categories:</strong> Below 0: "Freezing", 0 to 15: "Cold", 16 to 30: "Moderate", Above 30: "Hot"</p>
+            <input type="number" id="temperature" placeholder="Enter temperature">
+            <button onclick="categorizeTemperature()">Categorize Temperature</button>
+            <div id="temperatureResult" class="result"></div>
+        </div>
+        
+        <!-- Problem 5: String Locator -->
+        <div class="problem">
+            <h2>Problem 5: Find Index of 'locate'</h2>
+            <p><strong>String:</strong> "Please locate where 'locate' occurs!"</p>
+            <button onclick="findLocateIndex()">Find Index of 'locate'</button>
+            <div id="locateResult" class="result"></div>
+        </div>
+        
+        <!-- Problem 6: Student Registration Form -->
+        <div class="problem">
+            <h2>Problem 6: Student Registration Form with Validation</h2>
+            <p><strong>Validations:</strong> No null values, Name only alphabets, Mobile 10 digits, Pin code 6 digits</p>
+            
+            <div class="form-container">
+                <h3 style="color: #f39c12; text-align: center;">Student Registration Form</h3>
+                
+                <div class="form-group">
+                    <label>Name of Student:</label>
+                    <input type="text" id="studentName">
+                </div>
+                <div class="form-group">
+                    <label>Mobile No:</label>
+                    <input type="text" id="mobileNo">
+                </div>
+                <div class="form-group">
+                    <label>Address Line:</label>
+                    <input type="text" id="addressLine">
+                </div>
+                <div class="form-group">
+                    <label>City:</label>
+                    <input type="text" id="city">
+                </div>
+                <div class="form-group">
+                    <label>State:</label>
+                    <input type="text" id="state">
+                </div>
+                <div class="form-group">
+                    <label>Pincode:</label>
+                    <input type="text" id="pincode">
+                </div>
+                
+                <button onclick="submitForm()">Submit</button>
+                <button onclick="resetForm()" style="background: #7f8c8d;">Reset</button>
+            </div>
+            
+            <div id="formResult" class="result"></div>
+            <div id="studentTable"></div>
+        </div>
+        
+        <!-- Problem 7: QuerySelector Demo -->
+        <div class="problem">
+            <h2>Problem 7: Select elements with class "menu-item" and attribute data-menu="true"</h2>
+            
+            <div class="menu-item" data-menu="true">Home</div>
+            <div class="menu-item" data-menu="false">About</div>
+            <div class="menu-item" data-menu="true">Services</div>
+            <div class="menu-item" data-menu="false">Contact</div>
+            <div class="menu-item" data-menu="true">Portfolio</div>
+            
+            <br><br>
+            <button onclick="selectMenuItems()">Run querySelectorAll('.menu-item[data-menu="true"]')</button>
+            <div id="querySelectorResult" class="result"></div>
+        </div>
+        
+        <!-- Problem 8: Toggle Button Text -->
+        <div class="problem">
+            <h2>Problem 8: Toggle Button Text between "Show" and "Hide"</h2>
+            <button class="toggle-btn" id="toggleBtn" onclick="toggleButtonText()">Show</button>
+            <div id="toggleContent" style="display: none; margin-top: 15px; padding: 15px; background: #e8f4fd; border-radius: 8px;">
+                <p>🎉 Content is now visible! Click "Hide" to hide this content.</p>
+            </div>
+        </div>
+        
+        <!-- Problem 9: Number Guessing Game -->
+        <div class="problem">
+            <h2>Problem 9: Guess the Number Game (1 to 10)</h2>
+            <div class="game-container">
+                <h3>Guess the number between 1 to 10</h3>
+                <input type="number" id="guessInput" min="1" max="10" placeholder="2" value="2">
+                <button onclick="guessNumber()">Guess</button>
+                <div id="gameMessage">Try again!</div>
+                <div id="attemptCount">Number of attempts: 1</div>
+            </div>
+        </div>
+        
+        <!-- Problem 9 (Additional): Button Selection Revealer -->
+        <div class="problem">
+            <h2>Problem 9 (Additional): Reveal Button Names When Clicked</h2>
+            <div class="selection-container">
+                <p><strong>You have selected</strong></p>
+                <button onclick="revealButton('HTML')">HTML</button>
+                <button onclick="revealButton('JavaScript')">JavaScript</button>
+                <button onclick="revealButton('CSS')">CSS</button>
+                <div id="revealedButtons">Click buttons to reveal their names</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Problem 3: Factorial Calculator - EXACT requirements
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+        
+        function calculateFactorial() {
+            // Use prompt to enter the number (as specified)
+            const number = prompt("Enter a number to calculate factorial:");
+            
+            if (number === null) {
+                // User clicked cancel
+                document.getElementById('factorialResult').innerHTML = '<span style="color: orange;">Operation cancelled by user</span>';
+                return;
+            }
+            
+            if (number === '' || isNaN(number) || number < 0 || !Number.isInteger(Number(number))) {
+                const errorMsg = "Please enter a valid non-negative integer!";
+                // Use console.log and Alert to display output (as specified)
+                console.log(errorMsg);
+                alert(errorMsg);
+                document.getElementById('factorialResult').innerHTML = `<span style="color: red;">${errorMsg}</span>`;
+                return;
+            }
+            
+            const result = factorial(parseInt(number));
+            const message = `Factorial of ${number} is ${result}`;
+            
+            // Use console.log and Alert to display output (as specified)
+            console.log(message);
+            alert(message);
+            
+            // Also display on page for better UX
+            document.getElementById('factorialResult').innerHTML = message;
+        }
+        
+        // Problem 4: Temperature Categorizer - EXACT categories
+        function categorizeTemperature() {
+            const temp = document.getElementById('temperature').value;
+            
+            if (temp === '') {
+                document.getElementById('temperatureResult').innerHTML = '<span style="color: red;">Please enter a temperature value!</span>';
+                return;
+            }
+            
+            const temperature = parseFloat(temp);
+            let category;
+            
+            if (temperature < 0) {
+                category = "Freezing";
+            } else if (temperature >= 0 && temperature <= 15) {
+                category = "Cold";
+            } else if (temperature >= 16 && temperature <= 30) {
+                category = "Moderate";
+            } else { // Above 30
+                category = "Hot";
+            }
+            
+            const result = `Temperature ${temperature}°C is categorized as: ${category}`;
+            document.getElementById('temperatureResult').innerHTML = result;
+        }
+        
+        // Problem 5: Find index of 'locate' in EXACT string
+        function findLocateIndex() {
+            const string = "Please locate where 'locate' occurs!";
+            const index = string.indexOf('locate');
+            const result = `In string: "${string}"<br>The word 'locate' is found at index: ${index}`;
+            document.getElementById('locateResult').innerHTML = result;
+            console.log(`Index of 'locate': ${index}`);
+        }
+        
+        // Problem 6: Student Registration Form - EXACT validations
+        let students = [];
+        
+        function validateForm() {
+            const name = document.getElementById('studentName').value.trim();
+            const mobile = document.getElementById('mobileNo').value.trim();
+            const address = document.getElementById('addressLine').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const state = document.getElementById('state').value.trim();
+            const pincode = document.getElementById('pincode').value.trim();
+            
+            // Check all fields should not contain a null value
+            if (!name || !mobile || !address || !city || !state || !pincode) {
+                return "All fields are required and should not contain null values!";
+            }
+            
+            // Check name field contains only alphabets
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                return "Name field should contain only alphabets!";
+            }
+            
+            // Mobile No field should be of 10 digits
+            if (!/^\d{10}$/.test(mobile)) {
+                return "Mobile No field should be exactly 10 digits!";
+            }
+            
+            // Pin code field should be of 06 digits
+            if (!/^\d{6}$/.test(pincode)) {
+                return "Pin code field should be exactly 6 digits!";
+            }
+            
+            return null; // No errors
+        }
+        
+        function submitForm() {
+            const error = validateForm();
+            
+            if (error) {
+                document.getElementById('formResult').innerHTML = `<span style="color: red;">${error}</span>`;
+                document.getElementById('formResult').className = 'result error';
+                return;
+            }
+            
+            const student = {
+                name: document.getElementById('studentName').value.trim(),
+                mobile: document.getElementById('mobileNo').value.trim(),
+                state: document.getElementById('state').value.trim()
+            };
+            
+            students.push(student);
+            
+            document.getElementById('formResult').innerHTML = 'Student registered successfully!';
+            document.getElementById('formResult').className = 'result';
+            
+            displayStudentTable();
+            resetForm();
+        }
+        
+        function resetForm() {
+            document.getElementById('studentName').value = '';
+            document.getElementById('mobileNo').value = '';
+            document.getElementById('addressLine').value = '';
+            document.getElementById('city').value = '';
+            document.getElementById('state').value = '';
+            document.getElementById('pincode').value = '';
+        }
+        
+        function displayStudentTable() {
+            if (students.length === 0) {
+                document.getElementById('studentTable').innerHTML = '';
+                return;
+            }
+            
+            // Show data in table format as specified
+            let tableHTML = `
+                <h4>Submitted Student Data:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Mobile No</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            students.forEach(student => {
+                tableHTML += `
+                    <tr>
+                        <td>${student.name}</td>
+                        <td>${student.mobile}</td>
+                        <td>${student.state}</td>
+                    </tr>
+                `;
+            });
+            
+            tableHTML += '</tbody></table>';
+            document.getElementById('studentTable').innerHTML = tableHTML;
+        }
+        
+        // Problem 7: Select all elements with class "menu-item" and attribute data-menu="true" using querySelectorAll()
+        function selectMenuItems() {
+            const elements = document.querySelectorAll('.menu-item[data-menu="true"]');
+            
+            let result = `<strong>querySelectorAll('.menu-item[data-menu="true"]') results:</strong><br>`;
+            result += `Found ${elements.length} elements:<br><br>`;
+            
+            elements.forEach((element, index) => {
+                result += `${index + 1}. "${element.textContent}" - class: ${element.className}, data-menu: ${element.getAttribute('data-menu')}<br>`;
+                // Highlight selected elements
+                element.style.transform = 'scale(1.1)';
+                element.style.boxShadow = '0 4px 8px rgba(0,0,0,0.3)';
+                setTimeout(() => {
+                    element.style.transform = 'scale(1)';
+                    element.style.boxShadow = 'none';
+                }, 1000);
+            });
+            
+            document.getElementById('querySelectorResult').innerHTML = result;
+            console.log('Selected elements:', elements);
+        }
+        
+        // Problem 8: Use onclick to dynamically toggle button text between "Show" and "Hide"
+        function toggleButtonText() {
+            const button = document.getElementById('toggleBtn');
+            const content = document.getElementById('toggleContent');
+            
+            if (button.textContent === 'Show') {
+                button.textContent = 'Hide';
+                content.style.display = 'block';
+            } else {
+                button.textContent = 'Show';
+                content.style.display = 'none';
+            }
+        }
+        
+        // Problem 9: Number Guessing Game - Guess number between 1 to 10
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
+        let attempts = 1; // Starting with 1 as shown in image
+        
+        function guessNumber() {
+            const guess = parseInt(document.getElementById('guessInput').value);
+            
+            if (isNaN(guess) || guess < 1 || guess > 10) {
+                document.getElementById('gameMessage').innerHTML = 'Please enter a number between 1 and 10!';
+                return;
+            }
+            
+            if (guess === randomNumber) {
+                document.getElementById('gameMessage').innerHTML = `🎉 Correct! The number was ${randomNumber}`;
+                document.getElementById('gameMessage').style.color = 'green';
+                // Reset game
+                randomNumber = Math.floor(Math.random() * 10) + 1;
+                attempts = 1;
+            } else {
+                document.getElementById('gameMessage').innerHTML = 'Try again!';
+                document.getElementById('gameMessage').style.color = 'orange';
+                attempts++;
+            }
+            
+            document.getElementById('attemptCount').textContent = `Number of attempts: ${attempts}`;
+        }
+        
+        // Problem 9 (Additional): Reveal button names when clicked
+        let revealedButtons = [];
+        
+        function revealButton(buttonName) {
+            if (!revealedButtons.includes(buttonName)) {
+                revealedButtons.push(buttonName);
+            }
+            
+            document.getElementById('revealedButtons').innerHTML = 
+                '<strong>Revealed buttons:</strong> ' + revealedButtons.join(', ');
+        }
+    </script>
+</body>
+</html>
